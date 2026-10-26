@@ -1,0 +1,339 @@
+/* Halaman Beranda (/). */
+
+.hero {
+  min-height: 100vh;
+  background: var(--maroon-dark);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.hero-video-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(36, 10, 11, 0.72) 0%,
+      rgba(40, 11, 12, 0.48) 48%,
+      rgba(26, 8, 9, 0.66) 100%
+    ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.65));
+}
+.hero-pattern {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.07;
+  background-image:
+    radial-gradient(circle at 20% 20%, #fff 1px, transparent 1px),
+    radial-gradient(circle at 80% 70%, #fff 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: min(1180px, calc(100% - 64px));
+  min-height: 100vh;
+  margin: auto;
+  padding: 125px 0 80px;
+  display: grid;
+  grid-template-columns: 1fr 0.82fr;
+  gap: 70px;
+  align-items: center;
+}
+.hero h1 {
+  font-size: clamp(3.6rem, 7vw, 6.6rem);
+  letter-spacing: -0.025em;
+}
+.hero-script {
+  font-size: 24px;
+  color: #f0dfbe;
+  margin: 22px 0 5px;
+}
+.hero-desc {
+  max-width: 570px;
+  color: #eadfd7;
+  font-size: 14px;
+}
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.hero-visual {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  perspective: 1000px;
+}
+.hero-frame {
+  border: 1px solid #fff5;
+  padding: 12px;
+  background: #fff1;
+  box-shadow: 0 30px 70px #0006;
+  transform: rotate(2deg);
+  transition: 0.4s;
+}
+.hero-visual:hover .hero-frame {
+  transform: rotate(0) translateY(-7px);
+}
+.hero-photo-slider {
+  position: relative;
+  overflow: hidden;
+  background: #291011;
+}
+.hero-photo-track {
+  display: flex;
+  transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.hero-photo {
+  min-width: 100%;
+  aspect-ratio: 4/5;
+}
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-photo-dots {
+  position: absolute;
+  left: 18px;
+  bottom: 17px;
+  display: flex;
+  gap: 6px;
+}
+.photo-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff7;
+}
+.photo-dot.active {
+  background: var(--gold-light);
+  width: 20px;
+  border-radius: 8px;
+}
+.hero-visual:after {
+  content: 'LIHAT GALERI  ↗';
+  position: absolute;
+  right: -12px;
+  bottom: -18px;
+  background: var(--gold);
+  color: var(--maroon-dark);
+  padding: 10px 15px;
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  box-shadow: 0 10px 25px #0004;
+}
+.scroll-hint {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  font-size: 0.8125rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff8;
+  text-decoration: none;
+}
+.scroll-hint span {
+  color: var(--gold-light);
+  margin-left: 8px;
+}
+.intro-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 90px;
+  align-items: end;
+}
+.intro-copy {
+  max-width: 620px;
+}
+.intro-copy p {
+  font-size: 15px;
+}
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--line);
+  margin-top: 70px;
+}
+.feature-card {
+  background: var(--paper);
+  padding: 30px 26px 32px;
+  min-height: 245px;
+  text-decoration: none;
+  position: relative;
+  transition: 0.3s;
+}
+.feature-card:hover {
+  background: #fff;
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+  z-index: 2;
+}
+.feature-number {
+  font-size: 0.8125rem;
+  color: var(--gold);
+  font-weight: 700;
+}
+.feature-icon {
+  display: block;
+  color: var(--maroon);
+  font-size: 22px;
+  margin: 30px 0 18px;
+}
+.feature-card h3 {
+  font-size: 29px;
+  margin-bottom: 9px;
+}
+.feature-card p {
+  font-size: 0.8125rem;
+}
+.card-arrow {
+  position: absolute;
+  right: 24px;
+  bottom: 23px;
+  color: var(--gold);
+  font-size: 18px;
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin-top: 65px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.stat {
+  padding: 28px 20px;
+  border-right: 1px solid var(--line);
+}
+.stat:last-child {
+  border-right: 0;
+}
+.stat strong {
+  display: block;
+  font: 700 50px/1 var(--display);
+  color: var(--maroon);
+}
+.stat span {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+.quote-section {
+  padding: 105px 0;
+  background: var(--maroon);
+  color: #fff;
+}
+.quote-inner {
+  max-width: 900px;
+  text-align: center;
+}
+.quote-mark {
+  font: 700 70px/0.7 var(--display);
+  color: var(--gold-light);
+}
+blockquote {
+  font: 600 clamp(2rem, 4vw, 3.5rem)/1.08 var(--display);
+  color: #fff;
+}
+.quote-line {
+  display: block;
+  width: 70px;
+  height: 1px;
+  background: var(--gold);
+  margin: 30px auto 0;
+}
+.hero-script {
+  font-family: 'Noto Sans Balinese', 'Cormorant Garamond', serif;
+}
+
+@media (max-width: 980px) {
+  .hero-content {
+    grid-template-columns: 1fr 0.8fr;
+    gap: 35px;
+  }
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stat:nth-child(2) {
+    border-right: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero-content {
+    padding-top: 105px;
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-bottom: 100px;
+  }
+  .hero {
+    min-height: 100svh;
+  }
+  .hero h1 {
+    font-size: clamp(3.2rem, 15vw, 5rem);
+  }
+  .hero-visual {
+    max-width: 430px;
+    margin: 10px auto 0;
+    width: 86%;
+  }
+  .scroll-hint {
+    display: none;
+  }
+  .intro-grid,
+  .history-layout,
+  .detail-layout,
+  .vt-layout,
+  .location-layout,
+  .explore-intro {
+    grid-template-columns: 1fr;
+  }
+  .intro-grid {
+    gap: 35px;
+  }
+  .feature-grid,
+  .stats,
+  .building-grid,
+  .info-grid,
+  .steps,
+  .heritage-grid {
+    grid-template-columns: 1fr;
+  }
+  .feature-card {
+    min-height: 190px;
+  }
+  .stats .stat {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .stats .stat:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-photo-track {
+    transition: none;
+  }
+}

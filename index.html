@@ -1,0 +1,238 @@
+<!doctype html>
+
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      content="Puri Ageng Marga — digital heritage dan virtual tour budaya Bali."
+      name="description"
+    />
+    <title>Puri Ageng Marga | Digital Heritage</title>
+    <meta content="#4a1520" name="theme-color" />
+    <link href="./favicon.svg" rel="icon" type="image/svg+xml" />
+    <meta content="website" property="og:type" />
+    <meta content="id_ID" property="og:locale" />
+    <meta content="Puri Ageng Marga" property="og:site_name" />
+    <meta content="Puri Ageng Marga | Digital Heritage" property="og:title" />
+    <meta
+      content="Puri Ageng Marga — digital heritage dan virtual tour budaya Bali."
+      property="og:description"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=Noto+Sans+Balinese&amp;family=Poppins:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      document.documentElement.classList.add('js');
+    </script>
+    <link href="assets/css/tokens.css" rel="stylesheet" />
+    <link href="assets/css/base.css" rel="stylesheet" />
+    <link href="assets/css/layout.css" rel="stylesheet" />
+    <link href="assets/css/components.css" rel="stylesheet" />
+    <link href="assets/css/pages/home.css" rel="stylesheet" />
+    <link href="assets/css/pages/home.css" rel="stylesheet" />
+  </head>
+  <body class="home-page">
+    <a class="skip-link" href="#konten">Lewati ke konten</a>
+    <!-- ===== HEADER (identik di semua halaman) ===== -->
+    <header class="navbar" id="navbar">
+      <div class="nav-inner">
+        <a class="nav-logo" href="index.html"
+          ><img
+            alt="Logo Puri Ageng Marga"
+            decoding="async"
+            height="148"
+            src="assets/img/ui/logo-puri.webp"
+            width="148"
+          /><span>Puri Ageng Marga<small>Warisan Budaya Bali</small></span></a
+        >
+        <nav class="nav-menu" id="navMenu">
+          <a aria-current="page" class="nav-link active" href="index.html">Beranda</a
+          ><a class="nav-link" href="virtual-tour/">Virtual Tour</a
+          ><a class="nav-link" href="sejarah/">Sejarah</a
+          ><a class="nav-link" href="galeri/">Galeri</a
+          ><a class="nav-link" href="jelajah/">Bangunan</a
+          ><a class="nav-link" href="informasi/">Informasi</a>
+        </nav>
+        <button
+          aria-controls="navMenu"
+          aria-expanded="false"
+          aria-label="Buka menu"
+          class="nav-toggle"
+          id="navToggle"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <!-- ===== /HEADER ===== -->
+    <main id="konten">
+      <section class="hero">
+        <video
+          aria-hidden="true"
+          autoplay=""
+          class="hero-video"
+          loop=""
+          muted=""
+          playsinline=""
+          poster="assets/img/hero/poster-hero.webp"
+          preload="metadata"
+        >
+          <source src="assets/video/puri-drone.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-video-overlay"></div>
+        <div class="hero-pattern"></div>
+        <div class="hero-content">
+          <div class="hero-text reveal">
+            <p class="eyebrow">DIGITAL HERITAGE • PURI AGENG MARGA</p>
+            <h1>Menjelajahi <em>Warisan</em><br />yang Hidup</h1>
+            <p class="hero-script" lang="ban">ᬧᬸᬭᬶ ᬅᬕᭂᬂ ᬫᬃᬕ</p>
+            <p class="hero-desc">
+              Mengenal sejarah, ruang, arsitektur, pusaka, dan kisah Puri Ageng Marga melalui
+              pengalaman digital yang interaktif.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-gold" href="virtual-tour/">Jelajahi Virtual Tour <span>→</span></a
+              ><a class="btn btn-outline" href="jelajah/">Jelajah Puri</a>
+            </div>
+          </div>
+          <a aria-label="Buka Galeri Puri Ageng Marga" class="hero-visual reveal" href="galeri/"
+            ><div class="hero-frame">
+              <div class="hero-photo-slider" id="heroPhotoSlider">
+                <div class="hero-photo-track" id="heroPhotoTrack">
+                  <div class="hero-photo">
+                    <img
+                      alt="Bale Agung"
+                      decoding="async"
+                      height="496"
+                      src="assets/img/bangunan/bale-agung.webp"
+                      width="661"
+                    />
+                  </div>
+                  <div class="hero-photo">
+                    <img
+                      alt="Bale Kembar"
+                      decoding="async"
+                      height="1071"
+                      loading="lazy"
+                      src="assets/img/bangunan/bale-kembar.webp"
+                      width="1430"
+                    />
+                  </div>
+                  <div class="hero-photo">
+                    <img
+                      alt="Kori Puri"
+                      decoding="async"
+                      height="732"
+                      loading="lazy"
+                      src="assets/img/bangunan/kori.webp"
+                      width="975"
+                    />
+                  </div>
+                  <div class="hero-photo">
+                    <img
+                      alt="Bale Gong"
+                      decoding="async"
+                      height="715"
+                      loading="lazy"
+                      src="assets/img/bangunan/bale-gong.webp"
+                      width="953"
+                    />
+                  </div>
+                </div>
+                <div class="hero-photo-dots" id="heroPhotoDots"></div>
+              </div></div
+          ></a>
+        </div>
+        <a class="scroll-hint" href="#tentang">Scroll untuk menjelajah <span>↓</span></a>
+      </section>
+      <section class="section section-cream" id="tentang">
+        <div class="container intro-grid">
+          <div class="section-heading reveal">
+            <p class="eyebrow dark">TENTANG PURI</p>
+            <h2>Jejak sejarah di tengah <em>Marga</em></h2>
+          </div>
+          <div class="intro-copy reveal">
+            <p>
+              Puri Ageng Marga merupakan salah satu puri yang berada di Desa Marga, Kecamatan Marga,
+              Kabupaten Tabanan, Bali. Website ini menjadi ruang digital untuk mengenal sejarah,
+              bangunan, warisan, dan pengalaman virtual Puri.
+            </p>
+            <a class="text-link" href="sejarah/">Baca kisah Puri <span>→</span></a>
+          </div>
+        </div>
+        <div class="container stats">
+          <div class="stat"><strong>15</strong><span>Bangunan &amp; area terdokumentasi</span></div>
+          <div class="stat"><strong>17C</strong><span>Periode penataan 1687–1689</span></div>
+          <div class="stat">
+            <strong>1949</strong><span>Peristiwa penting dalam sejarah Puri</span>
+          </div>
+          <div class="stat"><strong>360°</strong><span>Pengalaman virtual tour</span></div>
+        </div>
+        <div class="container feature-grid">
+          <a class="feature-card reveal" href="jelajah/"
+            ><span class="feature-number">01</span><span class="feature-icon">⌂</span>
+            <h3>Jelajah Puri</h3>
+            <p>Kenali 15 bangunan dan area berdasarkan dokumentasi yang tersedia.</p>
+            <span class="card-arrow">↗</span></a
+          ><a class="feature-card reveal" href="virtual-tour/"
+            ><span class="feature-number">02</span><span class="feature-icon">◉</span>
+            <h3>Virtual Tour</h3>
+            <p>Masuk ke pengalaman panorama 360° dan jelajahi ruang Puri.</p>
+            <span class="card-arrow">↗</span></a
+          ><a class="feature-card reveal" href="sejarah/"
+            ><span class="feature-number">03</span><span class="feature-icon">◌</span>
+            <h3>Sejarah</h3>
+            <p>Ikuti perjalanan sejarah Puri dari akar Arya Sentong hingga masa kini.</p>
+            <span class="card-arrow">↗</span></a
+          ><a class="feature-card reveal" href="galeri/"
+            ><span class="feature-number">04</span><span class="feature-icon">▧</span>
+            <h3>Galeri</h3>
+            <p>Lihat dokumentasi visual bangunan dan lingkungan Puri.</p>
+            <span class="card-arrow">↗</span></a
+          >
+        </div>
+      </section>
+      <section class="section">
+        <div class="container intro-grid">
+          <div class="section-heading reveal">
+            <p class="eyebrow dark">WARISAN YANG TERSISA</p>
+            <h2>Benda, ruang, dan <em>ingatan</em></h2>
+          </div>
+          <div class="intro-copy reveal">
+            <p>
+              Hasil wawancara mencatat masih adanya pusaka dan peninggalan seperti tiga pusaka, satu
+              peti tombak, kulkul, cap kerajaan, baju kebesaran, serta daun pintu Kori yang masih
+              lama. Dua foto raja juga berhasil ditemukan kembali.
+            </p>
+            <a class="text-link" href="pageSejarah.html#warisan">Lihat warisan <span>→</span></a>
+          </div>
+        </div>
+      </section>
+      <section class="quote-section">
+        <div class="container quote-inner reveal">
+          <span class="quote-mark">“</span>
+          <blockquote>
+            Warisan bukan hanya sesuatu yang dilihat dari masa lalu, tetapi sesuatu yang dikenali,
+            dipahami, dan diteruskan.
+          </blockquote>
+          <span class="quote-line"></span>
+        </div>
+      </section>
+    </main>
+    <!-- ===== FOOTER (identik di semua halaman) ===== -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <strong>Puri Ageng Marga</strong><span>Virtual Tour &amp; Digital Heritage</span
+        ><span>© 2026</span>
+      </div>
+    </footer>
+    <!-- ===== /FOOTER ===== -->
+    <script defer="" src="assets/js/nav.js"></script>
+    <script defer="" src="assets/js/reveal.js"></script>
+    <script defer="" src="assets/js/slider.js"></script>
+  </body>
+</html>

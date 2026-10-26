@@ -1,0 +1,111 @@
+/* Halaman Sejarah (/sejarah/). */
+
+.history-layout {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 100px;
+  padding: 90px 0;
+}
+.history-intro {
+  position: sticky;
+  top: 110px;
+  align-self: start;
+}
+.ornament {
+  font-size: 30px;
+  color: var(--gold);
+  margin-bottom: 25px;
+}
+.history-intro h2 {
+  font-size: clamp(2.8rem, 4.5vw, 4.3rem);
+  color: var(--maroon);
+  margin-bottom: 20px;
+}
+.history-intro p {
+  font-size: 13px;
+}
+.timeline {
+  border-left: 1px solid var(--gold);
+  padding-left: 42px;
+}
+.timeline-item {
+  position: relative;
+  padding: 0 0 50px;
+}
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+.timeline-item:before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--gold);
+  left: -49px;
+  top: 4px;
+  box-shadow: 0 0 0 7px var(--paper);
+}
+.timeline-item > span {
+  font-size: 0.8125rem;
+  color: var(--gold);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+.timeline-item small {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--muted);
+  letter-spacing: 0.12em;
+  margin: 3px 0 7px;
+}
+.timeline-item h3 {
+  font-size: 34px;
+  color: var(--maroon);
+  margin-bottom: 10px;
+}
+.timeline-item p {
+  font-size: 13px;
+}
+.heritage-box {
+  background: var(--maroon);
+  color: #fff;
+  padding: 50px;
+}
+.heritage-box h2 {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 25px;
+}
+.heritage-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: #ffffff25;
+  margin-top: 30px;
+}
+.heritage-item {
+  padding: 25px;
+  background: #5a1f20;
+}
+.heritage-item b {
+  display: block;
+  font: 600 25px var(--display);
+  color: var(--gold-light);
+}
+.heritage-item span {
+  font-size: 0.8125rem;
+  color: #fff9;
+}
+
+@media (max-width: 760px) {
+  .history-intro {
+    position: static;
+  }
+  .timeline {
+    padding-left: 27px;
+  }
+  .timeline-item:before {
+    left: -34px;
+  }
+}

@@ -1,0 +1,120 @@
+/* Halaman Informasi & Lokasi (/informasi/). */
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 75px 0 55px;
+}
+.info-card {
+  padding: 28px;
+  border: 1px solid var(--line);
+  background: #fff;
+  min-height: 230px;
+}
+.info-icon {
+  font-size: 24px;
+  color: var(--gold);
+}
+.info-card h3 {
+  font-size: 28px;
+  color: var(--maroon);
+  margin: 20px 0 9px;
+}
+.info-card p {
+  font-size: 0.8125rem;
+}
+.location-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 70px;
+  padding: 80px 0 110px;
+  align-items: center;
+}
+.map-placeholder {
+  aspect-ratio: 16/11;
+  background: #e7dfd2;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+.map-grid {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(35deg, transparent 47%, #fff8 48%, #fff8 49%, transparent 50%),
+    linear-gradient(125deg, transparent 47%, #fff8 48%, #fff8 49%, transparent 50%),
+    linear-gradient(#d7cbb9 1px, transparent 1px),
+    linear-gradient(90deg, #d7cbb9 1px, transparent 1px);
+  background-size:
+    auto,
+    auto,
+    45px 45px,
+    45px 45px;
+}
+.map-pin {
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  transform: translate(-50%, -50%);
+  width: 58px;
+  height: 58px;
+  border-radius: 50% 50% 50% 0;
+  background: var(--maroon);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+  rotate: -45deg;
+  box-shadow: 0 15px 30px #35131444;
+}
+.map-pin::first-letter {
+  rotate: 45deg;
+}
+.map-label {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  background: #fff;
+  padding: 9px 13px;
+  font-size: 0.8125rem;
+  letter-spacing: 0.1em;
+  color: var(--maroon);
+  font-weight: 700;
+}
+.location-copy h2 {
+  color: var(--maroon);
+  font-size: 4rem;
+  margin-bottom: 28px;
+}
+.location-list {
+  border-top: 1px solid var(--line);
+  margin-bottom: 28px;
+}
+.location-list div {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+.location-list span {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+.location-list b {
+  font-size: 0.8125rem;
+  color: var(--maroon);
+}
+
+@media (max-width: 980px) {
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .location-copy h2 {
+    font-size: 3.3rem;
+  }
+}

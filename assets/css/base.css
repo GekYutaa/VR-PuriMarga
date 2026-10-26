@@ -1,0 +1,84 @@
+/* Reset, elemen dasar (html, body, a, img, judul, p), fokus, skip-link, animasi reveal, reduced-motion. */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.7;
+}
+a {
+  color: inherit;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+button {
+  font: inherit;
+}
+.container {
+  width: min(1180px, calc(100% - 64px));
+  margin: auto;
+}
+h2 {
+  font-size: clamp(2.7rem, 5vw, 4.5rem);
+  letter-spacing: -0.02em;
+}
+p {
+  color: var(--muted);
+}
+.js .reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+.js .reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+:focus-visible {
+  outline: 3px solid var(--gold-light, #e6c27a);
+  outline-offset: 3px;
+}
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 8px;
+  z-index: 1000;
+  background: #fff;
+  color: var(--maroon);
+  padding: 10px 16px;
+  border-radius: 6px;
+}
+.skip-link:focus {
+  left: 8px;
+}
+
+@media (max-width: 760px) {
+  .container,
+  .hero-content {
+    width: min(100% - 36px, 620px);
+  }
+  .hero-text {
+    text-align: left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .js .reveal {
+    transition: none;
+  }
+}

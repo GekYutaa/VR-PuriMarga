@@ -1,0 +1,215 @@
+/* Komponen dipakai ulang: eyebrow, tombol, tautan, hero halaman dalam, FAQ, lightbox, dsb. */
+
+.eyebrow {
+  font-size: 0.8125rem;
+  letter-spacing: 0.22em;
+  font-weight: 700;
+  color: var(--gold-light);
+  margin-bottom: 14px;
+}
+.eyebrow.dark {
+  color: var(--maroon);
+}
+h1,
+h2,
+h3 {
+  font-family: var(--display);
+  font-weight: 600;
+  line-height: 0.98;
+}
+h2 em,
+h1 em {
+  color: var(--gold);
+  font-style: italic;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 13px 21px;
+  text-decoration: none;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  border: 1px solid transparent;
+  transition: 0.25s;
+}
+.btn span {
+  font-size: 18px;
+}
+.btn-gold {
+  background: var(--gold);
+  color: var(--maroon-dark);
+}
+.btn-gold:hover {
+  background: #e2b967;
+  transform: translateY(-2px);
+}
+.btn-outline {
+  border-color: #fff8;
+  color: #fff;
+}
+.btn-outline:hover {
+  background: #fff;
+  color: var(--maroon);
+}
+.btn-maroon {
+  background: var(--maroon);
+  color: #fff;
+}
+.btn-maroon:hover {
+  background: var(--maroon-dark);
+  transform: translateY(-2px);
+}
+.text-link {
+  display: inline-flex;
+  gap: 10px;
+  color: var(--maroon);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  text-decoration: none;
+  margin-top: 20px;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 5px;
+}
+.small-note {
+  font-size: 0.8125rem;
+  margin-top: 14px;
+  color: #8a7e76;
+}
+.page-main {
+  padding-top: 82px;
+}
+.page-hero {
+  background: var(--cream);
+  padding: 100px 0 85px;
+  position: relative;
+  overflow: hidden;
+}
+.page-hero:after {
+  content: 'PURI';
+  position: absolute;
+  right: -20px;
+  bottom: -80px;
+  font: 700 230px/1 var(--display);
+  color: #5a1f2008;
+}
+.page-hero h1 {
+  font-size: clamp(4rem, 8vw, 7rem);
+  color: var(--maroon);
+}
+.page-hero p:not(.eyebrow) {
+  max-width: 690px;
+  margin-top: 22px;
+  font-size: 14px;
+}
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: #1b0b0ced;
+  z-index: 300;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+.lightbox.open {
+  display: flex;
+}
+.lightbox img {
+  max-width: min(100%, 1100px);
+  max-height: 82vh;
+  object-fit: contain;
+}
+.lightbox-close {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  background: none;
+  border: 0;
+  color: #fff;
+  font-size: 42px;
+  cursor: pointer;
+}
+.lightbox-caption {
+  position: absolute;
+  bottom: 18px;
+  color: #fff;
+  font-size: 0.8125rem;
+}
+.center {
+  text-align: center;
+}
+.center > h2 {
+  color: var(--maroon);
+}
+.faq-section {
+  padding: 30px 0 105px;
+}
+.faq-section .section-heading {
+  margin-bottom: 35px;
+}
+.faq-section h2 {
+  color: var(--maroon);
+}
+.accordion {
+  border-top: 1px solid var(--line);
+}
+.faq-item {
+  border-bottom: 1px solid var(--line);
+}
+.faq-q {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 0;
+  font-weight: 600;
+  color: var(--maroon);
+  cursor: pointer;
+  list-style: none;
+}
+.faq-q::-webkit-details-marker {
+  display: none;
+}
+.faq-q::after {
+  content: '+';
+  color: #8a6a1f;
+  font-size: 20px;
+}
+.faq-item[open] .faq-q::after {
+  content: '\2212';
+}
+.faq-a {
+  padding: 0 0 20px;
+}
+.faq-a p {
+  font-size: 0.875rem;
+}
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: 0;
+  color: #fff;
+  font-size: 42px;
+  padding: 12px;
+  cursor: pointer;
+}
+.lightbox-prev {
+  left: 16px;
+}
+.lightbox-next {
+  right: 16px;
+}
+
+@media (max-width: 760px) {
+  .page-hero {
+    padding: 75px 0 65px;
+  }
+  .page-hero h1 {
+    font-size: clamp(3.5rem, 17vw, 5.5rem);
+  }
+}

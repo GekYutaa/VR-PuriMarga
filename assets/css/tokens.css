@@ -1,0 +1,18 @@
+/* Token desain: warna, font, ukuran. Ubah tampilan global di sini. */
+
+:root {
+  --maroon: #5a1f20;
+  --maroon-dark: #321314;
+  --maroon-soft: #7a3533;
+  --gold: #c99b4a;
+  --gold-light: #e5c887;
+  --cream: #f4eee2;
+  --paper: #fffdf8;
+  --ink: #241b19;
+  --muted: #766b64;
+  --line: #ded2c2;
+  --white: #fff;
+  --display: 'Cormorant Garamond', serif;
+  --font: 'Poppins', sans-serif;
+  --shadow: 0 20px 60px rgba(48, 25, 20, 0.12);
+}

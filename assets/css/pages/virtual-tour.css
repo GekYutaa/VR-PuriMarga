@@ -1,0 +1,88 @@
+/* Halaman Virtual Tour (/virtual-tour/). */
+
+.vt-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 75px;
+  padding: 85px 0 105px;
+  align-items: center;
+}
+.tour-preview {
+  position: relative;
+  border: 1px solid var(--line);
+  padding: 12px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+.tour-preview img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  background: var(--maroon-dark);
+}
+.tour-overlay {
+  position: absolute;
+  inset: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #32131477;
+  color: #fff;
+}
+.tour-overlay span {
+  font-size: 0.8125rem;
+  letter-spacing: 0.2em;
+  color: var(--gold-light);
+}
+.tour-overlay strong {
+  font: 600 40px var(--display);
+}
+.tour-copy h2 {
+  color: var(--maroon);
+  margin-bottom: 18px;
+}
+.tour-copy > p {
+  font-size: 13px;
+}
+.tour-points {
+  margin: 28px 0;
+  border-top: 1px solid var(--line);
+}
+.tour-points div {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+.tour-points b {
+  color: var(--gold);
+  font-size: 0.8125rem;
+}
+.tour-points span {
+  font-size: 0.8125rem;
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 45px;
+}
+.steps > div {
+  background: #fff;
+  padding: 30px;
+  border: 1px solid var(--line);
+}
+.steps b {
+  font-size: 0.8125rem;
+  color: var(--gold);
+}
+.steps h3 {
+  font-size: 28px;
+  color: var(--maroon);
+  margin: 20px 0 8px;
+}
+.steps p {
+  font-size: 0.8125rem;
+}
